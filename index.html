@@ -6,22 +6,27 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icons/icon.png">
+
     <script src="script.js" defer></script>
 </head>
 <body>
     <iframe src="https://elephantsuite.net/dashboard" frameborder="0"></iframe>
     <div id="modals">
-        <div id="music-modal">
-            <div id="music-modal-elements">
-
-            </div>
+        <div id="music-modal" class="inactive-modal">
+            <div id="music-modal-elements"></div>
             <div id="current-music">
-                
+                <img id="current-music-icon" src="./icons/note.png" alt="Music Icon">
+                <div>
+                    <h1 id="current-music-name">No Song Playing</h1>
+                    <p id="current-music-author">Select A Song</p>
+                </div>
+                <img src="icons/pause.png" alt="Pause Music" class="current-music-options" onclick="player.togglePlayPause();" id="play-pause-button">
+                <img src="icons/next.png" alt="Next Music" class="current-music-options" onclick="player.playRandom();">
             </div>
         </div>
     </div>
-    <div onclick="" class="button">
-        <img src="./icons/headphones.png" alt="">
+    <div onclick="toggleModal(document.getElementById('music-modal'))" class="button">
+        <img src="./icons/headphones.png" alt="" id="music-modal-button">
     </div>
 </body>
 </html>
