@@ -184,7 +184,7 @@ iframe {
 }
 
 #current-music > div:first-of-type {
-    width: calc(100% - var(--size) * 36px);
+    width: calc(100% - var(--size) * 80px);
 }
 
 #current-music > div:first-of-type > * , #music-modal-elements > div > div {

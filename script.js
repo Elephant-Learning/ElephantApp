@@ -3,6 +3,10 @@ class MusicPlayer {
         this.music = music;
         this.audio = new Audio();
         this.currentIndex = -1;
+
+        this.audio.addEventListener('ended', () => {
+            this.playRandom();
+        });
     }
 
     playSong(index) {
