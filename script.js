@@ -1,3 +1,15 @@
+const music = [
+    ["city-night", "City Night", "Abhiram Boddu"],
+    ["cool-breeze", "Cool Breeze", "Abhiram Boddu"],
+    ["insomnia", "Insomnia", "Abhiram Boddu"],
+    ["nostalgia", "Nostalgia", "Sid Gupta"],
+    ["rainy-café", "Rainy Café", "Abhiram Boddu"],
+    ["road-vibes", "Road Vibes", "Abhiram Boddu"],
+    ["space-trip", "Space Trip", "Abhiram Boddu"],
+    ["summer-strings", "Summer Strings", "Abhiram Boddu"],
+    ["timeless-inception", "Timeless Inception", "Abhiram Boddu"]
+];
+
 class MusicPlayer {
     constructor(music) {
         this.music = music;
@@ -61,18 +73,6 @@ class MusicPlayer {
     }
 }
 
-const music = [
-    ["city-night", "City Night", "Abhiram Boddu"],
-    ["cool-breeze", "Cool Breeze", "Abhiram Boddu"],
-    ["insomnia", "Insomnia", "Abhiram Boddu"],
-    ["nostalgia", "Nostalgia", "Abhiram Boddu"],
-    ["rainy-café", "Rainy Café", "Abhiram Boddu"],
-    ["road-vibes", "Road Vibes", "Abhiram Boddu"],
-    ["space-trip", "Space Trip", "Abhiram Boddu"],
-    ["summer-strings", "Summer Strings", "Abhiram Boddu"],
-    ["timeless-inception", "Timeless Inception", "Abhiram Boddu"]
-];
-
 const player = new MusicPlayer(music);
 
 function loadMusicPlayer(){
@@ -103,22 +103,17 @@ function loadMusicPlayer(){
 
         newDiv.append(coverImage, detailsDiv, playButton);
 
-        console.log("something")
-
         document.getElementById("music-modal-elements").appendChild(newDiv);
         iterator++;
     })
 }
 
-/*document.addEventListener('click', function(e) {
-    const musicModal = document.getElementById('music-modal');
+function updateTitle() {
+    const iframeDocument = document.getElementById('myIframe').contentDocument || document.getElementById('myIframe').contentWindow.document;
+    document.title = iframeDocument.title;
 
-    if (musicModal && !musicModal.contains(e.target) && !document.getElementById("music-modal-button").contains(e.target)) {
-        if (!musicModal.classList.contains('inactive-modal')) {
-            musicModal.classList.add('inactive-modal');
-        }
-    }
-});*/
+    console.log("Something about something")
+}
 
 function toggleModal(element){
     if(element.classList.contains("inactive-modal")) element.classList.remove("inactive-modal");
