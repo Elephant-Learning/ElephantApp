@@ -108,11 +108,13 @@ function loadMusicPlayer(){
     })
 }
 
-function updateTitle() {
-    const iframeDocument = document.getElementById('myIframe').contentDocument || document.getElementById('myIframe').contentWindow.document;
+document.getElementById("main-window").onload = function () {
+    console.log(this.contentWindow.location.href);
+
+    /*const iframeDocument = document.getElementById('myIframe').contentDocument || document.getElementById('myIframe').contentWindow.document;
     document.title = iframeDocument.title;
 
-    console.log("Something about something")
+    console.log("Something about something")*/
 }
 
 function toggleModal(element){
